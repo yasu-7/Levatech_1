@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use APP\Http\Controllers\PostController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +13,4 @@ use APP\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome'); }
-);
-
-Route::get('/posts',[PostControlller::class, 'index']);
+Route::get('/', [PostController::class, 'index']);
